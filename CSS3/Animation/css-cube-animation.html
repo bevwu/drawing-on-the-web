@@ -26,16 +26,15 @@
 				-webkit-transform: rotate3d(0, 0, 1, 180deg);
 			}
 
-			.cube, .cube2, .cube3, .cube4, .cube5 {
+			.cube1, .cube2, .cube3 {
 				position: relative;
 				width: 150px;
 				/*opacity: 0.7;*/
 				transform-style: preserve-3d;
 				-webkit-transform-style: preserve-3d;
-				
 			}
 
-			.cube:hover, .cube2:hover, .cube3:hover, .cube4:hover, .cube5:hover {
+			.cube1:hover, .cube2:hover, .cube3:hover, .cube4:hover, .cube5:hover {
 				transform-style: preserve-3d;
 				-webkit-transform-style: preserve-3d;
 				animation: spin 3s;
@@ -46,7 +45,7 @@
 				-webkit-animation-timing-function: linear;
 			}
 
-			.cube div {
+			.cube1 div {
 				position: absolute;
 				top: -100px;
 				width: 150px;
@@ -83,13 +82,54 @@
 				-webkit-transform: translateZ(-75px) rotateY(180deg);
 			}
 
-			.right {
+			.right1a {
+				background-image: url(http://i.imgur.com/xoIKlFy.jpg);
 				transform: rotateY(-270deg) translateX(75px);
 				-webkit-transform: rotateY(-270deg) translateX(75px);
 				transform-origin: top right;
 				-webkit-transform-origin: top right;
 			}
-
+			
+			.right1b {
+				background-color: black;
+				transform: rotateY(-270deg) translateX(75px) translateZ(1px);
+				-webkit-transform: rotateY(-270deg) translateX(75px) translateZ(1px);
+				transform-origin: top right;
+				-webkit-transform-origin: top right;
+			}
+			
+			.right2a {
+				background-image: url(http://i.imgur.com/WTo06QR.jpg);
+				transform: rotateY(-270deg) translateX(75px);
+				-webkit-transform: rotateY(-270deg) translateX(75px);
+				transform-origin: top right;
+				-webkit-transform-origin: top right;
+			}
+			
+			.right2b {
+				background-color: black;
+				transform: rotateY(-270deg) translateX(75px) translateZ(1px);
+				-webkit-transform: rotateY(-270deg) translateX(75px) translateZ(1px);
+				transform-origin: top right;
+				-webkit-transform-origin: top right;
+			}
+			
+			.right3a {
+				background-image: url(http://i.imgur.com/FeDMCkI.jpg);
+				transform: rotateY(-270deg) translateX(75px);
+				-webkit-transform: rotateY(-270deg) translateX(75px);
+				transform-origin: top right;
+				-webkit-transform-origin: top right;
+			}
+			
+			.right3b {
+				background-color: black;
+				transform: rotateY(-270deg) translateX(75px) translateZ(1px);
+				-webkit-transform: rotateY(-270deg) translateX(75px) translateZ(1px);
+				transform-origin: top right;
+				-webkit-transform-origin: top right;
+			}
+			
 			.left {
 				transform: rotateY(270deg) translateX(-75px);
 				-webkit-transform: rotateY(270deg) translateX(-75px);
@@ -123,37 +163,34 @@
 
 	<body>
 	
-	<img src="kitten1.jpg" alt="kitten1">
-
-	
 		<div class="container">
-			<div class="cube">
+			<div class="cube1">
 				<div class="front"></div>
 				<div class="back"></div>
 				<div class="top"></div>
 				<div class="bottom"></div>
 				<div class="left"></div>
-				<div class="right"></div>
+				<div class="right1a"></div>
+				<div class="right1b"></div>
 			</div>
-
 			<div class="cube2">
 				<div class="front"></div>
 				<div class="back"></div>
 				<div class="top"></div>
 				<div class="bottom"></div>
 				<div class="left"></div>
-				<div class="right"></div>
+				<div class="right2a"></div>
+				<div class="right2b"></div>
 			</div>
-
 			<div class="cube3">
 				<div class="front"></div>
 				<div class="back"></div>
 				<div class="top"></div>
 				<div class="bottom"></div>
 				<div class="left"></div>
-				<div class="right"></div>
+				<div class="right3a"></div>
+				<div class="right3b"></div>
 			</div>
-
 		</div>
 	</body>
 
