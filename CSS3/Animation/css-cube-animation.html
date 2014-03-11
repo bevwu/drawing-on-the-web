@@ -7,9 +7,9 @@
 		<title>CSS3 Cube</title>
 		<style>
 			.container {
-				width: 200px;
+				width: 150px;
 				margin: auto;
-				margin-top: 200px;
+				margin-top: 150px;
 				perspective: 600px;
 				-webkit-perspective: 600px;
 				perspective-origin: 100px 100px;
@@ -21,61 +21,50 @@
 			}
 
 			.container:active {
+				transform-origin: 50% 100% 50%;
 				transform: rotate3d(0, 0, 1, 180deg);
 				-webkit-transform: rotate3d(0, 0, 1, 180deg);
 			}
 
 			.cube, .cube2, .cube3, .cube4, .cube5 {
 				position: relative;
-				width: 200px;
-				opacity: 0.7;
+				width: 150px;
+				/*opacity: 0.7;*/
 				transform-style: preserve-3d;
 				-webkit-transform-style: preserve-3d;
-				animation: spin 4s;
-				-webkit-animation: spin 4s;
+				
+			}
+
+			.cube:hover, .cube2:hover, .cube3:hover, .cube4:hover, .cube5:hover {
+				transform-style: preserve-3d;
+				-webkit-transform-style: preserve-3d;
+				animation: spin 3s;
+				-webkit-animation: spin 3s;
 				animation-iteration-count: infinite;
 				-webkit-animation-iteration-count: infinite;
 				animation-timing-function: linear;
 				-webkit-animation-timing-function: linear;
 			}
 
-			.cube:hover, .cube2:hover, .cube3:hover, .cube4:hover, .cube5:hover {
-				animation-play-state: paused;
-				-webkit-animation-play-state: paused;
-			}
-
 			.cube div {
 				position: absolute;
-				width: 200px;
-				height: 200px;
+				top: -100px;
+				width: 150px;
+				height: 150px;
 			}
 
 			.cube2 div {
 				position: absolute;
-				top: -250px;
-				width: 200px;
-				height: 200px;
+				top: 100px;
+				width: 150px;
+				height: 150px;
 			}
 
 			.cube3 div {
 				position: absolute;
-				top: 250px;
-				width: 200px;
-				height: 200px;
-			}
-
-			.cube4 div {
-				position: absolute;
-				left: 250px;
-				width: 200px;
-				height: 200px;
-			}
-
-			.cube5 div {
-				position: absolute;
-				left: -250px;
-				width: 200px;
-				height: 200px;
+				top: 300px;
+				width: 150px;
+				height: 150px;
 			}
 
 			@keyframes spin {
@@ -89,52 +78,54 @@
 			}
 
 			.back {
-				background-color: red;
-				transform: translateZ(-100px) rotateY(180deg);
-				-webkit-transform: translateZ(-100px) rotateY(180deg);
+				background-color: black;
+				transform: translateZ(-75px) rotateY(180deg);
+				-webkit-transform: translateZ(-75px) rotateY(180deg);
 			}
 
 			.right {
-				background-color: orange;
-				transform: rotateY(-270deg) translateX(100px);
-				-webkit-transform: rotateY(-270deg) translateX(100px);
+				transform: rotateY(-270deg) translateX(75px);
+				-webkit-transform: rotateY(-270deg) translateX(75px);
 				transform-origin: top right;
 				-webkit-transform-origin: top right;
 			}
 
 			.left {
-				background-color: yellow;
-				transform: rotateY(270deg) translateX(-100px);
-				-webkit-transform: rotateY(270deg) translateX(-100px);
+				transform: rotateY(270deg) translateX(-75px);
+				-webkit-transform: rotateY(270deg) translateX(-75px);
 				transform-origin: center left;
 				-webkit-transform-origin: center left;
 			}
 
 			.top {
-				background-color: green;
-				transform: rotateX(-90deg) translateY(-100px);
-				-webkit-transform: rotateX(-90deg) translateY(-100px);
+				background-color: black;
+				transform: rotateX(-90deg) translateY(-75px);
+				-webkit-transform: rotateX(-90deg) translateY(-75px);
 				transform-origin: top center;
 				-webkit-transform-origin: top center;
 			}
 
 			.bottom {
-				background-color: blue;
-				transform: rotateX(90deg) translateY(100px);
-				-webkit-transform: rotateX(90deg) translateY(100px);
+				background-color: black;
+				transform: rotateX(90deg) translateY(75px);
+				-webkit-transform: rotateX(90deg) translateY(75px);
 				transform-origin: bottom center;
 				-webkit-transform-origin: bottom center;
 			}
 
 			.front {
-				background-color: purple;
-				transform: translateZ(100px);
-				-webkit-transform: translateZ(100px);
+				background-color: black;
+				transform: translateZ(75px);
+				-webkit-transform: translateZ(75px);
 			}
 		</style>
 	</head>
 
 	<body>
+	
+	<img src="kitten1.jpg" alt="kitten1">
+
+	
 		<div class="container">
 			<div class="cube">
 				<div class="front"></div>
@@ -163,23 +154,6 @@
 				<div class="right"></div>
 			</div>
 
-			<div class="cube4">
-				<div class="front"></div>
-				<div class="back"></div>
-				<div class="top"></div>
-				<div class="bottom"></div>
-				<div class="left"></div>
-				<div class="right"></div>
-			</div>
-
-			<div class="cube5">
-				<div class="front"></div>
-				<div class="back"></div>
-				<div class="top"></div>
-				<div class="bottom"></div>
-				<div class="left"></div>
-				<div class="right"></div>
-			</div>
 		</div>
 	</body>
 
